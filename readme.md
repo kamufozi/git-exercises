@@ -398,3 +398,79 @@ $ git log --oneline
 cc9d42f (HEAD -> main, origin/main) This is a combination of 2 commits that I forgot
 ab1f6cb chore: Create second file
 8620b8e chore: Create initial file
+```
+Challenge 6
+
+```sh
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+b36d350 (HEAD -> main, origin/main) Hehe I commited this changes
+cc9d42f This is a combination of 2 commits that I forgot
+drop ab1f6cb chore: Create second file
+ab1f6cb chore: Create second file
+8620b8e chore: Create initial file
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git rebase -i HEAD~4
+fatal: invalid upstream 'HEAD~4'
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git rebase -i HEAD~4
+fatal: invalid upstream 'HEAD~4'
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/main.
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) error: could not remove '.git/rebase-merge'
+
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (|REBASE)
+$ rm -rf .git/rebase-merge
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+fbc93cb (HEAD -> main) Hehe I commited this changes
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 2 and 3 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git add .
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git push -f
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 3.76 KiB | 1.88 MiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/kamufozi/git-exercises.git
+ + b36d350...fbc93cb main -> main (forced update)
+ 
+Before dropping one commit:
+$ git log --oneline
+b36d350 (HEAD -> main, origin/main) Hehe I commited this changes
+cc9d42f This is a combination of 2 commits that I forgot
+drop ab1f6cb chore: Create second file
+ab1f6cb chore: Create second file
+8620b8e chore: Create initial file
+
+After dropping the bitch:
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+fbc93cb (HEAD -> main) Hehe I commited this changes
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file
