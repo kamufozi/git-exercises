@@ -287,3 +287,114 @@ ab1f6cb chore: Create second file
 8620b8e chore: Create initial file
 ##When we push and you go miles back on your commit and you reset and change the name 
 ##The files will come also edited with that name 
+```
+Challenge 5
+
+```sh
+before merging 2 commits and naming them one : 
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+eaa4fec (HEAD -> main) Added the fourth challenge
+1280a38 (origin/main) Create Third File
+ab1f6cb chore: Create second file
+8620b8e chore: Create initial file
+After merging them and all the trouble I went through:
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git rebase -i HEAD~3
+[detached HEAD cc9d42f] This is a combination of 2 commits that I forgot
+ Date: Wed Mar 5 15:55:21 2025 +0200
+ 3 files changed, 289 insertions(+)
+ create mode 100644 readme.md
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/main.
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) yyyy
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) yy
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) yy
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) yy
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) y:q
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) :q
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory '.git/rebase-merge' failed. Should I try again? (y/n) error: could not remove '.git/rebase-merge'
+
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (|REBASE)
+$ rm -rf .git/rebase-merge
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git pull
+Auto-merging readme.md
+CONFLICT (add/add): Merge conflict in readme.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main|MERGING)
+$ git merge --abort
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git add .
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git pull
+Auto-merging readme.md
+CONFLICT (add/add): Merge conflict in readme.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main|MERGING)
+$ git push -f
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.09 KiB | 1.03 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/kamufozi/git-exercises.git
+ + 1280a38...cc9d42f main -> main (forced update)
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main|MERGING)
+$ git merge --abort
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git oneline
+git: 'oneline' is not a git command. See 'git --help'.
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+cc9d42f (HEAD -> main, origin/main) This is a combination of 2 commits that I forgot
+ab1f6cb chore: Create second file
+8620b8e chore: Create initial file
