@@ -702,3 +702,19 @@ $
 ### Challenge 2
 
 ```sh
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-feature)
+$ touch feature.txt
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-feature)
+$ git add .
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-feature)
+$ git commit -m 'Implemented core functionality for new feature'
+[ft/new-feature 06af18b] Implemented core functionality for new feature
+ 2 files changed, 23 insertions(+), 1 deletion(-)
+ create mode 100644 feature.txt
+ ```
+ ### Challenge 3
+
+ ```sh
+ 
