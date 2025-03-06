@@ -478,7 +478,7 @@ fbc93cb (HEAD -> main) Hehe I commited this changes
 ### Challenge 7
 
 ```sh
-Before :
+Before Reordering using git rebase:
 Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
 $ git log --oneline
 81cb680 (HEAD -> main, origin/main, newBranch) Added an html file
@@ -501,3 +501,139 @@ d7d22ef Added an html file
 8620b8e chore: Create initial file
 ## The way we do this is we rebase where we want and after rebasing we to the commit we want we type
 ## dd and it copies that line and then we move the cursor where we want to go and then we paste from there and it done this is how we reorder
+```
+### Challenge 8
+
+```sh
+Before cherry-picking from ft/branch:
+9598812 (HEAD -> main, origin/main) Finished the 7th challenge
+3843d9c Just edited the readme file
+d7d22ef Added an html file
+23b8fed Finished challenge 6
+2f861d4 Checking to see something
+1eb964c Hehe I commited this changes
+63b0964 Added file
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file
+
+The ft/bundle commit :  b1353ba (ft/branch) Implemented the test 5 file
+
+commands used  : 
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git branch ft/branch
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git checkout ft/branch
+M       readme.md
+Switched to branch 'ft/branch'
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/branch)
+$ touch test5.md
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/branch)
+$ git add test5.md
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/branch)
+$ git commit -m 'Implemented the test 5 file'
+[ft/branch b1353ba] Implemented the test 5 file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/branch)
+$ git checkout main
+M       readme.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+9598812 (HEAD -> main, origin/main) Finished the 7th challenge
+3843d9c Just edited the readme file
+d7d22ef Added an html file
+23b8fed Finished challenge 6
+2f861d4 Checking to see something
+1eb964c Hehe I commited this changes
+63b0964 Added file
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git checkout ft/bundle
+error: pathspec 'ft/bundle' did not match any file(s) known to git
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git branch
+  ft/branch
+* main
+  newBranch
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline ft/branch
+b1353ba (ft/branch) Implemented the test 5 file
+9598812 (HEAD -> main, origin/main) Finished the 7th challenge
+3843d9c Just edited the readme file
+d7d22ef Added an html file
+23b8fed Finished challenge 6
+2f861d4 Checking to see something
+1eb964c Hehe I commited this changes
+63b0964 Added file
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+9598812 (HEAD -> main, origin/main) Finished the 7th challenge
+3843d9c Just edited the readme file
+d7d22ef Added an html file
+23b8fed Finished challenge 6
+2f861d4 Checking to see something
+1eb964c Hehe I commited this changes
+63b0964 Added file
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git cherry-pick b1353ba
+[main 82f0f86] Implemented the test 5 file
+ Date: Thu Mar 6 16:04:02 2025 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+82f0f86 (HEAD -> main) Implemented the test 5 file
+9598812 (origin/main) Finished the 7th challenge
+3843d9c Just edited the readme file
+d7d22ef Added an html file
+23b8fed Finished challenge 6
+2f861d4 Checking to see something
+1eb964c Hehe I commited this changes
+63b0964 Added file
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/kamufozi/git-exercises.git
+   9598812..82f0f86  main -> main
+
+After Cherry-picking:
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+82f0f86 (HEAD -> main, origin/main) Implemented the test 5 file
+9598812 Finished the 7th challenge
+3843d9c Just edited the readme file
+d7d22ef Added an html file
+23b8fed Finished challenge 6
+2f861d4 Checking to see something
+1eb964c Hehe I commited this changes
+63b0964 Added file
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file.
