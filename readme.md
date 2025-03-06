@@ -236,7 +236,7 @@ $ git log --oneline
 ab1f6cb chore: Create second file
 8620b8e chore: Create initial file
 ```
-Challenge 4
+### Challenge 4
 
 ```sh
 Before reset : 
@@ -288,7 +288,7 @@ ab1f6cb chore: Create second file
 ##When we push and you go miles back on your commit and you reset and change the name 
 ##The files will come also edited with that name 
 ```
-Challenge 5
+### Challenge 5
 
 ```sh
 before merging 2 commits and naming them one : 
@@ -399,7 +399,7 @@ cc9d42f (HEAD -> main, origin/main) This is a combination of 2 commits that I fo
 ab1f6cb chore: Create second file
 8620b8e chore: Create initial file
 ```
-Challenge 6
+### Challenge 6
 
 ```sh
 Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
@@ -474,3 +474,18 @@ $ git log --oneline
 fbc93cb (HEAD -> main) Hehe I commited this changes
 12eb0c9 This is a combination of 2 commits that I forgot
 8620b8e chore: Create initial file
+```
+### Challenge 7
+
+```sh
+Before :
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+81cb680 (HEAD -> main, origin/main, newBranch) Added an html file
+5c041fe Checking to see something
+561713e Finished challenge 6
+a97f053 Added file
+fbc93cb Hehe I commited this changes
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file
+After Reordering :
