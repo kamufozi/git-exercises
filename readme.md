@@ -875,3 +875,53 @@ $ git branch
 ### Challenge 10
 
 ```sh
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+82e372b (HEAD -> main) Finished challenge 9
+a248809 (ft/improved-branch-name) Added Challenge 8 on ft/new-branch-from-commit
+7004003 Modified the readme file and started challenge 8
+8179ed8 Changed the readme file in another branch
+87d2204 Edited the readme file and added differenct challenges
+f01bdc9 Updated project readme
+2e28ebe (origin/ft/new-feature) Just started part 2 challenge 3
+06af18b Implemented core functionality for new feature
+97293a2 (origin/main) Added challenge 10
+510d351 Finished 8th challenge and understood git log grapp oneline all
+4639f01 Just finished the 8th challenge
+82f0f86 Implemented the test 5 file
+9598812 Finished the 7th challenge
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git checkout a248809
+Note: switching to 'a248809'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at a248809 Added Challenge 8 on ft/new-branch-from-commit
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git ((a248809...))
+$ git checkout main
+Previous HEAD position was a248809 Added Challenge 8 on ft/new-branch-from-commit
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+   ```
+ ## Part 3
+
+ ### Challenge 1
+
+ ```sh
+ 
