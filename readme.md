@@ -637,3 +637,40 @@ d7d22ef Added an html file
 63b0964 Added file
 12eb0c9 This is a combination of 2 commits that I forgot
 8620b8e chore: Create initial file.
+```
+### Challenge 9
+
+```sh
+git log --graph --oneline --all comes to show all the commits to help one visualize how the history is shaped:
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --graph --oneline --all
+* 4639f01 (HEAD -> main, origin/main) Just finished the 8th challenge
+* 82f0f86 Implemented the test 5 file
+| * b1353ba (ft/branch) Implemented the test 5 file
+|/
+* 9598812 Finished the 7th challenge
+* 3843d9c Just edited the readme file
+* d7d22ef Added an html file
+* 23b8fed Finished challenge 6
+* 2f861d4 Checking to see something
+* 1eb964c Hehe I commited this changes
+* 63b0964 Added file
+| * 81cb680 (newBranch) Added an html file
+| * 5c041fe Checking to see something 
+OR
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --graph --pretty=format:'%C(yellow)%h%C(reset) - %C(cyan)%s %C(green)(%cr) %C(reset) [%C(bold blue)%an%C(reset)]' --all
+* 4639f01 - Just finished the 8th challenge (7 minutes ago)  [Fozi Chris]
+* 82f0f86 - Implemented the test 5 file (9 minutes ago)  [Fozi Chris]
+| * b1353ba - Implemented the test 5 file (16 minutes ago)  [Fozi Chris]
+|/
+* 9598812 - Finished the 7th challenge (24 minutes ago)  [Fozi Chris]
+* 3843d9c - Just edited the readme file (26 minutes ago)  [Fozi Chris]
+* d7d22ef - Added an html file (26 minutes ago)  [Fozi Chris]
+* 23b8fed - Finished challenge 6 (26 minutes ago)  [Fozi Chris]
+* 2f861d4 - Checking to see something (26 minutes ago)  [Fozi Chris]
+* 1eb964c - Hehe I commited this changes (26 minutes ago)  [Fozi Chris]
+* 63b0964 - Added file (26 minutes ago)  [Fozi Chris]
+| * 81cb680 - Added an html file (56 minutes ago)  [Fozi Chris]
+| * 5c041fe - Checking to see something (56 minutes ago)  [Fozi Chris]
