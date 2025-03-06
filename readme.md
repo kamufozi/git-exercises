@@ -489,3 +489,15 @@ fbc93cb Hehe I commited this changes
 12eb0c9 This is a combination of 2 commits that I forgot
 8620b8e chore: Create initial file
 After Reordering :
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+3843d9c (HEAD -> main) Just edited the readme file
+d7d22ef Added an html file
+23b8fed Finished challenge 6
+2f861d4 Checking to see something
+1eb964c Hehe I commited this changes
+63b0964 Added file
+12eb0c9 This is a combination of 2 commits that I forgot
+8620b8e chore: Create initial file
+## The way we do this is we rebase where we want and after rebasing we to the commit we want we type
+## dd and it copies that line and then we move the cursor where we want to go and then we paste from there and it done this is how we reorder
