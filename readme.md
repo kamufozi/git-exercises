@@ -776,3 +776,48 @@ Deleted branch ft/new-feature (was 2e28ebe).
 ### Challenge 6
 
 ```sh
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git log --oneline
+f01bdc9 (HEAD -> main) Updated project readme
+2e28ebe (origin/ft/new-feature) Just started part 2 challenge 3
+06af18b Implemented core functionality for new feature
+97293a2 (origin/main) Added challenge 10
+510d351 Finished 8th challenge and understood git log grapp oneline all
+4639f01 Just finished the 8th challenge
+82f0f86 Implemented the test 5 file
+9598812 Finished the 7th challenge
+3843d9c Just edited the readme file
+d7d22ef Added an html file
+23b8fed Finished challenge 6
+2f861d4 Checking to see something
+1eb964c Hehe I commited this changes
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git checkout -b ft/new-branch-from-commit 06af18b
+error: Your local changes to the following files would be overwritten by checkout:
+        readme.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git add .
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git checkout -b ft/new-branch-from-commit 06af18b
+error: Your local changes to the following files would be overwritten by checkout:
+        readme.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git commit -m 'Edited the readme file and added differenct challenges'
+[main 87d2204] Edited the readme file and added differenct challenges
+ 1 file changed, 59 insertions(+), 1 deletion(-)
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git checkout -b ft/new-branch-from-commit 06af18b
+Switched to a new branch 'ft/new-branch-from-commit'
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-branch-from-commit)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
