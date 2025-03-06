@@ -821,3 +821,25 @@ Switched to a new branch 'ft/new-branch-from-commit'
 Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-branch-from-commit)
 $ git rebase main
 Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+```
+### Challenge 7
+
+```sh
+##merging the other branch into the main
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-branch-from-commit)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git merge ft/new-branch-from-commit
+Updating 87d2204..8179ed8
+Fast-forward
+ readme.md | 45 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 45 insertions(+)
+ ```
+ ### Challenge 8
+
+ ```sh
+ 
