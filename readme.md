@@ -674,3 +674,10 @@ $ git log --graph --pretty=format:'%C(yellow)%h%C(reset) - %C(cyan)%s %C(green)(
 * 63b0964 - Added file (26 minutes ago)  [Fozi Chris]
 | * 81cb680 - Added an html file (56 minutes ago)  [Fozi Chris]
 | * 5c041fe - Checking to see something (56 minutes ago)  [Fozi Chris]
+```
+### Challenge 10
+
+```sh
+I understand how git reflog work basically helps you see the recent HEADS and commits and allows you to put something in 
+the git reset so as to go back this also happened to me while I was working on git rebase and I kept losing my data I would 
+git reflog and then restore my data.
