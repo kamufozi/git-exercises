@@ -717,4 +717,62 @@ $ git commit -m 'Implemented core functionality for new feature'
  ### Challenge 3
 
  ```sh
- 
+ Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ touch readme.txt
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git add .
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git commit -m 'Updated project readme'
+[main 0def841] Updated project readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+ ```
+ ### Challenge 4
+
+ ```sh
+ Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git checkout ft/new-feature
+Switched to branch 'ft/new-feature'
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-feature)
+$ git push origin ft/new-feature
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 884 bytes | 221.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/new-feature' on GitHub by visiting:
+remote:      https://github.com/kamufozi/git-exercises/pull/new/ft/new-feature
+remote:
+To https://github.com/kamufozi/git-exercises.git
+ * [new branch]      ft/new-feature -> ft/new-feature
+ ```
+ ### Challenge 5
+ ```sh
+ Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+## Merged the other branch to my main
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git rebase ft/new-feature
+Successfully rebased and updated refs/heads/main.
+##Deleted the branch
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git branch -d ft/new-feature
+Deleted branch ft/new-feature (was 2e28ebe).
+```
+### Challenge 6
+
+```sh
