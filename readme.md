@@ -857,3 +857,21 @@ Switched to branch 'ft/new-branch-from-commit'
 Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-branch-from-commit)
 $ git rebase main
 Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+```
+### Challenge 9
+
+```sh
+##To change the name of a branch :
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git branch -m ft/new-branch-from-commit ft/improved-branch-name
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git branch
+  ft/branch
+  ft/improved-branch-name
+* main
+  newBranch
+```
+### Challenge 10
+
+```sh
