@@ -842,4 +842,18 @@ Fast-forward
  ### Challenge 8
 
  ```sh
- 
+ Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git add .
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git commit -m 'Modified the readme file and started challenge 8'
+[main 7004003] Modified the readme file and started challenge 8
+ 1 file changed, 23 insertions(+), 1 deletion(-)
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (ft/new-branch-from-commit)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
