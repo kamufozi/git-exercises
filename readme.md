@@ -924,4 +924,28 @@ Your branch is ahead of 'origin/main' by 8 commits.
  ### Challenge 1
 
  ```sh
- 
+ The codes that shows I stashed my changes I had made on the main Branch
+ Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git stash
+Saved working directory and index state WIP on main: ac1ad78 Finished Part 2 and Starting Part 3
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+The codes that show I git stash poped 
+
