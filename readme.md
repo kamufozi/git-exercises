@@ -924,6 +924,8 @@ Your branch is ahead of 'origin/main' by 8 commits.
  ### Challenge 1
 
  ```sh
+Hello I'm doing some changes so that I can commit them.
+
  The codes that shows I stashed my changes I had made on the main Branch
  Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
 $ git status
@@ -948,6 +950,52 @@ Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 The codes that show I git stash poped 
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git stash pop
+error: Your local changes to the following files would be overwritten by merge:
+        readme.md
+Please commit your changes or stash them before you merge.
+Aborting
+On branch main
+Your branch is up to date with 'origin/main'.
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+The stash entry is kept in case you need it again.
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git add .
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git commit -m 'Changed the readme file to show the git stash'
+[main 0b810fc] Changed the readme file to show the git stash
+ 1 file changed, 25 insertions(+), 1 deletion(-)
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git stash pop
+Auto-merging readme.md
+CONFLICT (content): Merge conflict in readme.md
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+The stash entry is kept in case you need it again.
+
+Fozi Chris@DESKTOP-EI6IC2P MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
  
-Hello I'm doing some changes so that I can commit them.
