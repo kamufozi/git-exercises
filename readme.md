@@ -1069,5 +1069,6 @@ Merged the changes I had made on the readme file on the stash and what wasn't st
 Made it by stashing changes on main branch and then putting other changes on top of it 
 
 the git mergetool was evasive I did not understand how it works.
+```
 
-<!url= snippet.png>
+![an image](snippet.png)
