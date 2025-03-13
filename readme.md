@@ -1072,3 +1072,31 @@ the git mergetool was evasive I did not understand how it works.
 ```
 
 ![an image](snippet.png)
+
+
+### Challenge 5
+
+```sh
+
+A detached HEAD in Git means you're not on a branch but instead directly on a specific commit. 
+This happens when you check out a past commit using:
+
+
+git checkout <commit-hash>
+In this state, any new commits you make will not belong to any branch, and switching branches will cause you to lose them (unless you create a new branch from the detached state).
+
+How to Fix It:
+To go back to a branch:
+git checkout main  # Or any branch name
+
+To save changes before switching:
+git checkout -b new-branch
+Let me know if you need an example!
+
+```
+
+### Challenge 6
+
+
+```sh
+
